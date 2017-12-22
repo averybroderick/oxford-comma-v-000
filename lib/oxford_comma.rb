@@ -12,7 +12,7 @@ def oxford_comma(array)
       else
          oxford_string << "and #{el}"
       end
-   end
+    end
   return oxford_string
- end
+  end
 end
