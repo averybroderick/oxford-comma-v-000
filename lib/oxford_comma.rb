@@ -6,12 +6,13 @@ def oxford_comma(array)
     return array.join(" and ")
   else
     oxford_string = ""
-    until array.last
-      array.each do |el|
-        oxford_string += "#{el}, "
+    array.each_with_index do |el, index|
+      if index < array.size-1
+        oxford_string << "#{el}, "
+      else
+         oxford_string << "and #{el}"
       end
-    end
-    oxford_string << "and #{array.last}"
-    return oxford_string
-  end
+   end
+  return oxford_string
+ end
 end
